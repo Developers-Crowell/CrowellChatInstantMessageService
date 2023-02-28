@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/crowellchatdb
+    password: CrowellChatPassword
+    username: postgres
+  security:
+    user:
+      name: admin
+      password: admin
+  jpa:
+    properties:
+      jakarta:
+        persistence:
+          schema-generation:
+            database:
+              action: drop-and-create
+              create-target: create.sql
+              create-source: metadata
+  data:
+    rest:
+      basePath: /api/v1
+springdoc:
+  paths-to-match: /api/v1/**
+  api-docs:
+      enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  show-actuator: true
