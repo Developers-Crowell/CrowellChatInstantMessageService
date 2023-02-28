@@ -25,7 +25,4 @@ public class InstantMessageServiceApplication {
                         .description("CrowellChat Documentation")
                         .url("https://crowell.dev/crowellchat"));
     }
-
-
-
 }
