@@ -25,7 +25,7 @@ public class InstantMessageEntity {
     private Long senderId;
     private Long recipientId;
     private Long duration;
-    private LocalDateTime create;
+    private LocalDateTime created;
     private LocalDateTime sent;
     private LocalDateTime received;
     private LocalDateTime delivered;
