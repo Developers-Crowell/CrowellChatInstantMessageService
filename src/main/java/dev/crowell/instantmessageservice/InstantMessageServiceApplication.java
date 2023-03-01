@@ -14,6 +14,7 @@ public class InstantMessageServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(InstantMessageServiceApplication.class, args);
     }
+
     @Bean
     public OpenAPI springShopOpenAPI() {
         return new OpenAPI()
