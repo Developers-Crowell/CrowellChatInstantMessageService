@@ -1,13 +1,13 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/crowellchatdb
-    password: CrowellChatPassword
-    username: postgres
+    url: ${DBURL:jdbc:postgresql://localhost:5432/crowellchatdb}
+    password: ${DBPASSWORD:CrowellChatPassword}
+    username: ${DBUSERNAME:postgres}
   security:
     user:
-      name: admin
-      password: admin
+      name: ${SPRINGSECUSER:admin}
+      password: ${SPRINGSECPASS:admin}
   jpa:
     properties:
       jakarta:
@@ -19,9 +19,9 @@ spring:
               create-source: metadata
   data:
     rest:
-      basePath: /api/v1
+      basePath: ${API_ROUTE:/api/v1}
 springdoc:
-  paths-to-match: /api/v1/**
+  paths-to-match: ${API_ROUTE:/api/v1/**}
   api-docs:
       enabled: true
   swagger-ui:

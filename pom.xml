@@ -11,8 +11,8 @@
     <groupId>dev.crowell</groupId>
     <artifactId>InstantMessageService</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>InstantMessageService2</name>
-    <description>InstantMessageService2</description>
+    <name>InstantMessageService</name>
+    <description>InstantMessageService</description>
     <properties>
         <java.version>19</java.version>
     </properties>
