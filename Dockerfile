@@ -14,5 +14,4 @@ RUN groupadd instantmessageservice && useradd -g instantmessageservice instantme
 USER instantmessageservice
 WORKDIR /app
 COPY --from=builder /app/target/*.jar .
-COPY --from=builder /app/src/main/resources/application-production.yml .
-CMD ["java", "-jar", "/app/InstantMessageService-0.0.1-SNAPSHOT.jar", "--spring.config.location=/app/application-production.yml"]
+CMD ["java", "-jar", "/app/InstantMessageService-0.0.1-SNAPSHOT.jar", "--spring.profiles.active=production"]
