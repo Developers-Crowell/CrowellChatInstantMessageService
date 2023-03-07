@@ -1,13 +1,12 @@
 spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: ${DBURL:jdbc:postgresql://localhost:5432/crowellchatdb}
-    password: ${DBPASSWORD:CrowellChatPassword}
-    username: ${DBUSERNAME:postgres}
   security:
     user:
       name: ${SPRINGSECUSER:admin}
       password: ${SPRINGSECPASS:admin}
+  r2dbc:
+    url: ${DBURL:r2dbc:postgresql://localhost:5432/crowellchatdb}
+    username: ${DBUSERNAME:postgres}
+    password: ${DBPASSWORD:CrowellChatPassword}
   jpa:
     properties:
       jakarta:

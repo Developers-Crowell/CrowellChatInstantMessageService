@@ -1,9 +1,4 @@
 spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: ${DBURL:jdbc:postgresql://localhost:5432/crowellchatdb}
-    password: ${DBPASSWORD:CrowellChatPassword}
-    username: ${DBUSERNAME:postgres}
   security:
     user:
       name: ${SPRINGSECUSER:test}
@@ -20,6 +15,10 @@ spring:
   data:
     rest:
       basePath: ${API_ROUTE:/api/v1}
+  r2dbc:
+    url: ${DBURL:r2dbc:postgresql://localhost:5432/crowellchatdb}
+    username: ${DBUSERNAME:postgres}
+    password: ${DBPASSWORD:CrowellChatPassword}
 springdoc:
   paths-to-match: ${API_ROUTE:/api/v1/**}
   api-docs:

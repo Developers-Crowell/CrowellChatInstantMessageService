@@ -1,26 +1,23 @@
 package dev.crowell.instantmessageservice.entities;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "instant_messages")
+
 @Slf4j
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table("instant_messages")
 @Tag(name = "Instant Message Entity", description = "This is the entity that represents an instant message.")
 public class InstantMessageEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long senderId;
     private Long recipientId;

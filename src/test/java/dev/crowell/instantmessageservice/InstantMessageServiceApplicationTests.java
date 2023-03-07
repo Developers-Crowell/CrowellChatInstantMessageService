@@ -1,7 +1,6 @@
 package dev.crowell.instantmessageservice;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.crowell.instantmessageservice.handlers.InstantMessageEventHandler;
 import dev.crowell.instantmessageservice.repos.InstantMessageRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
@@ -15,15 +14,12 @@ public class InstantMessageServiceApplicationTests {
     @Autowired
     private InstantMessageRepository repository;
     @Autowired
-    private InstantMessageEventHandler handler;
-    @Autowired
     private ObjectMapper mapper;
 
     @Test
     void contextLoads() {
         Assertions.assertAll(
                 () -> Assertions.assertNotNull(repository),
-                () -> Assertions.assertNotNull(handler),
                 () -> Assertions.assertNotNull(mapper)
         );
     }
